@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './../styles/App.css';
 
 const App = () => {
   const [weather] = useState({
@@ -13,7 +12,7 @@ const App = () => {
 
   return (
     <div>
-      <p>Temperature: <span style={tempStyle}>{weather.temperature}{"\u00B0"}C</span></p>
+      <p style={tempStyle}>{`Temperature: ${weather.temperature}\u00B0C`}</p>
       <p>Conditions: {weather.conditions}</p>
     </div>
   );
