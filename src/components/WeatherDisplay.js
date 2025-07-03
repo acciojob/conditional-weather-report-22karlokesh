@@ -1,7 +1,7 @@
+// WeatherDisplay.js
 import React from "react";
 
 const WeatherDisplay = ({ weather }) => {
-  // determine style
   const tempStyle = {
     color: weather.temperature > 20 ? "red" : "blue"
   };
