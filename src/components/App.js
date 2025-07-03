@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './../styles/App.css';
 
 const App = () => {
   const [weather] = useState({
@@ -6,13 +7,19 @@ const App = () => {
     conditions: "Sunny"
   });
 
+  // Conditional inline style for temperature span
   const tempStyle = {
     color: weather.temperature > 20 ? "red" : "blue"
   };
 
   return (
     <div>
-      <p style={tempStyle}>{`Temperature: ${weather.temperature}\u00B0C`}</p>
+      {/* Temperature paragraph with span wrapping temperature + °C */}
+      <p>
+        Temperature: <span style={tempStyle}>{weather.temperature}°C</span>
+      </p>
+
+      {/* Conditions paragraph */}
       <p>Conditions: {weather.conditions}</p>
     </div>
   );
