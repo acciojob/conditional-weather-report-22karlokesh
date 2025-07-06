@@ -7,19 +7,15 @@ const App = () => {
     conditions: "Sunny"
   });
 
-  // Conditional inline style for temperature span
   const tempStyle = {
     color: weather.temperature > 20 ? "red" : "blue"
   };
 
   return (
     <div>
-      {/* Temperature paragraph with span wrapping temperature + °C */}
       <p>
-        Temperature: <span style={tempStyle}>{weather.temperature}°C</span>
+        Temperature: <span style={tempStyle}>{weather.temperature}</span>
       </p>
-
-      {/* Conditions paragraph */}
       <p>Conditions: {weather.conditions}</p>
     </div>
   );
